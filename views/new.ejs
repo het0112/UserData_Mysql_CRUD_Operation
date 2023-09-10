@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New User</title>
+    <style>
+      .form-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .form-container input {
+        height: 30px;
+        border: 0.5px;
+        margin: 5px;
+        background-color: azure;
+      }
+      .form-container button {
+        color: white;
+        background-color: rgb(10, 154, 211);
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <form action="/user/new" method="POST">
+        <label for="email">Email:</label><br />
+        <input name="email" type="email" placeholder="enter email" />
+        <br /><br />
+
+        <label for="username">UserName:</label><br />
+        <input name="username" type="text" placeholder="enter usernmae" />
+        <br /><br />
+
+        <label for="password">Password:</label><br />
+        <input name="password" type="password" placeholder="enter password" />
+        <br /><br />
+        <button>Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

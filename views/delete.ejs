@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete User</title>
+    <style>
+      .delete-form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .delete-form input{
+        height: 30px;
+        border: 0.5px;
+        margin: 5px;
+        background-color: azure;  
+      }
+      .delete-form button{
+        border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    color: white;
+    background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+   <div class="delete-form">
+    <h3>To delete this user : <%= user.email %> </h3>
+    <form method="post" action="/user/<%= user.id%>?_method=DELETE">
+      <label for="password">Password:</label><br>
+      <input placeholder="enter password to delete" name="password"  class="input"/><br><br>
+      <button >Delete</button>
+    </form>
+   </div>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit User</title>
+    <style>
+      .edit-from
+      {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .edit-from input,textarea{
+        height: 30px;
+        border: 0.5px;
+        margin: 5px;
+        background-color: azure;
+      }
+      .edit-from button{
+        color: white;
+        background-color: rgb(10, 154, 211);
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="edit-from">
+      <h3>Edit your user : <%= user.email %></h3>
+      <form method="post" action="/user/<%= user.id %>?_method=PATCH">
+        <label for="username">UserName:</label><br>
+        <textarea name="username"><%= user.username %></textarea><br><br>
+
+        <label for="password">Password:</label><br>
+        <input
+          name="password"
+          placeholder="enter your password"
+          type="password"
+        />
+        <br><br>
+        <button>Submit</button>
+      </form>
+    </div>
+    
+
+    
+  </body>
+</html>

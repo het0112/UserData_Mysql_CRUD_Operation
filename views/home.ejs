@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hi, Welcome!</h1>
+      <h2>
+        Become a part of our community of
+        <b style="color: red"><%= count %></b> users
+      </h2>
+        <div class="btn-container"><a href="http://localhost:8080/user"
+          ><button id="show-user">Show User</button></a
+        >
+        <a href="http://localhost:8080/user/new?"
+          ><button id="new-user">Add New User</button></a
+        ></div>
+    </div>
+  </body>
+</html>
